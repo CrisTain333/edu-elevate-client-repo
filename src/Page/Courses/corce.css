@@ -1,0 +1,29 @@
+.courseMainDiv{
+    display: flex;
+    width: 90%;
+    margin: 0px auto;
+      
+}
+.leftSide{
+    flex: 3;
+}
+.rightSide{
+    flex: 8;
+}
+@media screen and (max-width:668px) {
+
+    .courseMainDiv{
+        display: block;
+        width: 100%;
+    }
+    .leftSide{
+        width: 100%;
+    }
+    .rightSide{
+        width: 100%;
+    }
+    .uls{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
