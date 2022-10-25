@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { FaStar } from "react-icons/fa";
 const CourseCard = (props) => {
-  const { title, img, description , id} = props.data;
+  const { title, img, description , id ,rating} = props.data;
   return (
     <>
     <Link to={`/course/${id}`}>
@@ -19,7 +19,8 @@ const CourseCard = (props) => {
             {title}
           </h2>
           <p class="leading-relaxed">{description?.slice(0, 150)} ...</p>
-          <Link to={`/course/${id}`} class="text-indigo-500 inline-flex items-center mt-4  hover:text-red-600">
+        <div className="flex items-center justify-between ">
+        <Link to={`/course/${id}`} class="text-indigo-500 inline-flex items-center mt-4  hover:text-red-600">
             See Details
             <svg
               class="w-4 h-4 ml-2"
@@ -34,6 +35,8 @@ const CourseCard = (props) => {
               <path d="M12 5l7 7-7 7"></path>
             </svg>
           </Link>
+          <p className="flex items-center justify-between">Rating : <FaStar className="text-yellow-400"></FaStar> {rating}</p> 
+        </div> 
         </div>
       </div>
 
