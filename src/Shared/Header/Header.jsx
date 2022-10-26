@@ -69,7 +69,7 @@ const Header = () => {
         </ul>
         <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
-          <img class="inline-block h-10 w-10 mr-2 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""></img>
+          <img className="inline-block h-10 w-10 mr-2 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""></img>
           <button type="button" className="px-6 py-2 font-semibold border rounded dark:border-gray-100 dark:text-gray-100">Sing Out</button>
                      
             
@@ -187,7 +187,7 @@ const Header = () => {
                       </a>
                     </li>
                     <li>
-                    <img class="inline-block h-10 w-10 mr-2 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""></img>
+                    <img className="inline-block h-10 w-10 mr-2 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""></img>
                     <button type="button" className="px-8 py-3 font-semibold border rounded dark:border-gray-100 dark:text-gray-100">Sing Out</button>
                     </li>
                   </ul>
