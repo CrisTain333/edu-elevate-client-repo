@@ -43,6 +43,37 @@ const Blog = () => {
                 </p>
               </div>
             </div>
+            <div className="py-8 flex flex-wrap md:flex-nowrap">
+              <div className="md:flex-grow">
+                <h2 className="text-3xl font-medium text-gray-900 title-font mb-2">
+                  How Does The Private Route Work?
+                </h2>
+                <p className="leading-relaxed">
+                  Private Routes vary based on the Apps, For example, Dashboard,
+                  User Profile, App Settings, Home etc. In simple words, These
+                  routes can be accessed only after login. The constraints for
+                  Public and Private routes are that Public routes should not be
+                  accessed after login and Private routes should not be
+                  accessible before login. The private route component is
+                  similar to the public route, the only change is that redirect
+                  URL and authenticate condition. If the user is not
+                  authenticated he will be redirected to the login page and the
+                  user can only access the authenticated routes If he is
+                  authenticated (Logged in).
+                </p>
+              </div>
+            </div>
+            <div className="py-8 flex flex-wrap md:flex-nowrap">
+              <div className="md:flex-grow">
+                <h2 className="text-3xl font-medium text-gray-900 title-font mb-2">
+                What Is Node? How Does Node Work?
+                </h2>
+                <p className="leading-relaxed">
+                Node.js is an open-source backend javascript runtime environment. It is a used as backend service where javascript works on the server-side of the application. This way javascript is used on both frontend and backend. Node.js runs on chrome v8 engine which converts javascript code into machine code, it is highly scalable, lightweight, fast, and data-intensive.
+                Node.js accepts the request from the clients and sends the response, while working with the request node.js handles them with a single thread.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

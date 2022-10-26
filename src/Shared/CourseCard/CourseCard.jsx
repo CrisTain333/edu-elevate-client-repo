@@ -34,7 +34,7 @@ const CourseCard = (props) => {
               <path d="M12 5l7 7-7 7"></path>
             </svg>
           </Link>
-          <p className="flex items-center justify-between">Rating : <FaStar className="text-yellow-400"></FaStar> {rating}</p> 
+          <p className="flex items-center justify-between">Rating : <FaStar className="text-yellow-400"></FaStar>  {rating}</p> 
         </div> 
         </div>
       </div>

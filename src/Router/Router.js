@@ -5,6 +5,8 @@ import CourseDetails from "../Page/CourseDetails/CourseDetails";
 import Courses from "../Page/Courses/Courses";
 import Faq from "../Page/FAQ/Faq";
 import Home from "../Page/Home/Home";
+import SingIn from "../Page/Logins/SingIn";
+import SingUp from "../Page/Logins/SingUp";
 
 const router =  createBrowserRouter([
     {
@@ -43,6 +45,17 @@ const router =  createBrowserRouter([
             {
                 path:'/blog',
                 element:<Blog/>
+
+            },
+            {
+                path:'/singin',
+                element:<SingIn/>
+
+            }
+            ,
+            {
+                path:'/singup',
+                element:<SingUp/>
 
             }
         ]
