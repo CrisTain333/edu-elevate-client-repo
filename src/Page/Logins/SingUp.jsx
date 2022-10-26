@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import AuthContext from "../../Contexts/Context";
 
 const SingUp = () => {
   const [error, setError] = useState("");
-  const { createUser, updateUser } = useContext(AuthContext);
+  const { createUser, updateUser , googleLogin } = useContext(AuthContext);
 
 
   const handleSubmit = (e) => {
@@ -30,9 +30,9 @@ const SingUp = () => {
 
     createUser(email, password)
       .then((userCredential) => {
-        setError('');
+        
         updateUser(name, photoUrl);
-        console.log(userCredential.user)
+        form.reset()
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -40,6 +40,18 @@ const SingUp = () => {
         setError(errorMessage);
       });
   };
+
+
+  const handleGoogleLogin = ()=>{
+    googleLogin()
+    .then(()=>{
+    })
+    .catch(error=>{
+      toast.error(error.message)
+      setError(error.message)
+    })
+  }
+
 
   return (
     <div className="flex items-center ">
@@ -130,7 +142,7 @@ const SingUp = () => {
           <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
         </div>
         <div className="flex justify-center space-x-4">
-          <button aria-label="Log in with Google" className="p-3 rounded-sm">
+          <button aria-label="Log in with Google" className="p-3 rounded-sm" onClick={handleGoogleLogin}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"

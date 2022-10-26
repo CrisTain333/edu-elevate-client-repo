@@ -1,13 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React ,{useContext, useState} from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import AuthContext from "../../Contexts/Context";
 
 const SingIn = () => {
+  const [error,setError]=useState('');
+  const {singInUser} = useContext(AuthContext)
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  
+  const from = location.state?.from?.pathname || "/";
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
+    singInUser(email,password)
+    .then(()=>{
+      navigate(from, { replace: true });
+    })
+    .catch((error)=>{
+      const err =  error.message
+      setError(err)
+    })
   };
 
   return (
@@ -48,7 +64,7 @@ const SingIn = () => {
           />
         </form>
 
-        <p className="text-red-600"></p>
+        <p className="text-red-600">{error}</p>
 
         <div className="flex items-center pt-4 space-x-1">
           <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>

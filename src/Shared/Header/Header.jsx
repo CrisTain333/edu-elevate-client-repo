@@ -5,7 +5,7 @@ import AuthContext from "../../Contexts/Context";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { user } = useContext(AuthContext);
+  const { user , singOutUser } = useContext(AuthContext);
 
   return (
     <>
@@ -59,6 +59,7 @@ const Header = () => {
                   <button
                     type="button"
                     className="bg-green-500 hover:bg-green-700 text-white uppercase text-sm font-semibold px-4 py-2 rounded "
+                    onClick={singOutUser}
                   >
                     Sing Out
                   </button>
@@ -188,6 +189,7 @@ const Header = () => {
                             <button
                               type="button"
                               className="bg-green-500 hover:bg-green-700 text-white uppercase text-sm font-semibold px-4 py-2 rounded"
+                              onClick={singOutUser}
                             >
                               Sing Out
                             </button>

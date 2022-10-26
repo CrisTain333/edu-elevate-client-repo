@@ -1,12 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import Blog from "../Page/Blog/Blog";
+import CheckOut from "../Page/Checkout/CheckOut";
 import CourseDetails from "../Page/CourseDetails/CourseDetails";
 import Courses from "../Page/Courses/Courses";
 import Faq from "../Page/FAQ/Faq";
 import Home from "../Page/Home/Home";
 import SingIn from "../Page/Logins/SingIn";
 import SingUp from "../Page/Logins/SingUp";
+import PrivateRoute from "./PrivateRoute";
 
 const router =  createBrowserRouter([
     {
@@ -56,6 +58,11 @@ const router =  createBrowserRouter([
             {
                 path:'/singup',
                 element:<SingUp/>
+
+            },
+            {
+                path:'/checkout',
+                element: <PrivateRoute><CheckOut/></PrivateRoute>
 
             }
         ]
