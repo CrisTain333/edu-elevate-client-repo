@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../Image/it.png";
+import logo from "../../Image/brandLogo.png";
 import { BsArrowBarRight } from "react-icons/bs";
 
 const Header = () => {
@@ -11,14 +11,14 @@ const Header = () => {
       <div className="px-4 py-5 mx-auto z-50 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative flex items-center justify-between">
           <Link to="/" className="inline-flex items-center">
-            <img src={logo} className="h-10 " alt="" />
+            <img src={logo} className="h-14 " alt="" />
             <rect x="3" y="1" width="7" height="12" />
             <rect x="3" y="17" width="7" height="6" />
             <rect x="14" y="1" width="7" height="6" />
             <rect x="14" y="11" width="7" height="12" />
 
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-              IT-Wolrd
+            Edu<span className="text-green-500 text-2xl">Elevate</span>
             </span>
           </Link>
           <ul className="flex items-center hidden space-x-8 lg:flex">
@@ -57,7 +57,7 @@ const Header = () => {
                 to="/singin"
                 aria-label="Product pricing"
                 title="Product pricing"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className="bg-green-500 hover:bg-green-700 text-white uppercase text-sm font-semibold px-4 py-2 rounded"
               >
                 Sing In
               </Link>
@@ -67,7 +67,7 @@ const Header = () => {
                 to="/singup"
                 aria-label="Product pricing"
                 title="Product pricing"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className="bg-green-500 hover:bg-green-700 text-white uppercase text-sm font-semibold px-4 py-2 rounded"
               >
                 Sing Up
               </Link>
@@ -78,9 +78,13 @@ const Header = () => {
                 src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                 alt=""
               ></img>
+              <div class="border-light text-body-color absolute bottom-full left-1/2 z-20 mb-3 -translate-x-1/2 whitespace-nowrap rounded border bg-white py-[6px] px-4 text-sm font-semibold opacity-0 group-hover:opacity-100">
+                <span class="border-light absolute -bottom-1 left-1/2 -z-10 h-2 w-2 -translate-x-1/2 rotate-45 rounded-l-sm border-b border-r bg-white"></span>
+                Tooltip Text
+              </div>
               <button
                 type="button"
-                className="px-6 py-2 font-semibold border rounded dark:border-gray-100 dark:text-gray-100"
+                className="bg-green-500 hover:bg-green-700 text-white uppercase text-sm font-semibold px-4 py-2 rounded "
               >
                 Sing Out
               </button>
@@ -126,7 +130,7 @@ const Header = () => {
                         <rect x="14" y="11" width="7" height="12" />
 
                         <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                          IT-Wolrd
+                        <span className="text-green-500">Edu</span>Elevate
                         </span>
                       </Link>
                     </div>

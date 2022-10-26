@@ -9,7 +9,7 @@ const SingIn = () => {
     const password = form.password.value;
     console.log(email, password);
   };
-  
+
   return (
     <div className="flex items-center lg:h-screen lg:w-full">
       <div className="w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto">
@@ -26,7 +26,7 @@ const SingIn = () => {
               type="email"
               name="email"
               id="email"
-              placeholder="Username or Email"
+              placeholder="Email"
             />
           </div>
           <div className="mb-6 md:w-full">
@@ -91,7 +91,7 @@ const SingIn = () => {
           <Link
             rel="noopener noreferrer"
             to="/singup"
-            className="underline text-red-600"
+            className="underline text-red-600 px-2" 
           >
             Sign up
           </Link>

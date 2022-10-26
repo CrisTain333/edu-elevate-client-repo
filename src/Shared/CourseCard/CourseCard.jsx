@@ -19,7 +19,7 @@ const CourseCard = (props) => {
           </h2>
           <p className="leading-relaxed">{description?.slice(0, 150)} ...</p>
         <div className="flex items-center justify-between ">
-        <Link to={`/course/${id}`} className="text-indigo-500 inline-flex items-center mt-4  hover:text-red-600">
+        <Link to={`/course/${id}`} className="text-green-500 inline-flex items-center mt-4  hover:text-red-600">
             See Details
             <svg
               className="w-4 h-4 ml-2"

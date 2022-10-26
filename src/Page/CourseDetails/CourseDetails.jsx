@@ -33,7 +33,7 @@ const CourseDetails = () => {
               <h3 className="text-2xl py-3 font-semibold">Course Discription</h3>
                 <p className="leading-relaxed text-lg mb-4">{description}</p>
                 <Link to="#" className="text-indigo-500 inline-flex items-center">
-                  <button className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded shadow-md bg-deep-purple-accent-400 bg-red-600 text-white focus:shadow-outline focus:outline-none">
+                  <button className="inline-flex items-center justify-center bg-green-500 hover:bg-green-700 text-white uppercase text-sm font-semibold px-4 py-2 rounded">
                     Get premium access
                     <svg
                       fill="none"
