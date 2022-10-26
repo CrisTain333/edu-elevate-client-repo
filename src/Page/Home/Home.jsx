@@ -30,7 +30,9 @@ const Home = () => {
               </h2>
 
               <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
-                Leadership and learning are indispensable to each other
+                “For the best return on your money, pour your purse into your head.”
+                “Leadership and learning are indispensable to each other.”
+                “Intellectual growth should commence at birth and cease only at death.”
               </p>
             </div>
           </div>

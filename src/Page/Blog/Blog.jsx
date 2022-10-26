@@ -4,7 +4,7 @@ const Blog = () => {
   return (
     <div>
       <section className="text-gray-600 body-font overflow-hidden">
-        <div className="container px-24 py-24 mx-auto">
+        <div className="container lg:px-24 sm:p-10 py-24 mx-auto">
           <div className="-my-8 divide-y-2 divide-gray-100">
             <div className="py-8 flex flex-wrap md:flex-nowrap">
               <div className="md:flex-grow">

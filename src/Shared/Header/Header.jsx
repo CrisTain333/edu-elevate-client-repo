@@ -20,6 +20,14 @@ const Header = () => {
           <ul className="flex items-center hidden space-x-8 lg:flex">
             <li>
               <Link
+                to="/home"
+                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 "
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/Courses"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 "
               >
@@ -75,16 +83,6 @@ const Header = () => {
                     className="bg-green-500 hover:bg-green-700 text-white uppercase text-sm font-semibold px-4 py-2 rounded"
                   >
                     Sing In
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/singup"
-                    aria-label="Product pricing"
-                    title="Product pricing"
-                    className="bg-green-500 hover:bg-green-700 text-white uppercase text-sm font-semibold px-4 py-2 rounded"
-                  >
-                    Sing Up
                   </Link>
                 </li>
               </>
@@ -148,6 +146,17 @@ const Header = () => {
                   </div>
                   <nav>
                     <ul className="space-y-4">
+                    
+                      <li>
+                        <Link
+                          to="/home"
+                          aria-label="Our product"
+                          title="Our product"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        >
+                          Home
+                        </Link>
+                      </li>
                       <li>
                         <Link
                           to="/courses"
@@ -204,16 +213,6 @@ const Header = () => {
                                 className="bg-green-500 hover:bg-green-700 text-white uppercase text-sm font-semibold px-4 py-2 rounded"
                               >
                                 Sing In
-                              </Link>
-                            </li>
-                            <li>
-                              <Link
-                                to="/singup"
-                                aria-label="Product pricing"
-                                title="Product pricing"
-                                className="bg-green-500 hover:bg-green-700 text-white uppercase text-sm font-semibold px-4 py-2 rounded"
-                              >
-                                Sing Up
                               </Link>
                             </li>
                           </>

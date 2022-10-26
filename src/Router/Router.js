@@ -4,6 +4,7 @@ import Blog from "../Page/Blog/Blog";
 import CheckOut from "../Page/Checkout/CheckOut";
 import CourseDetails from "../Page/CourseDetails/CourseDetails";
 import Courses from "../Page/Courses/Courses";
+import ErrorPage from "../Page/Error/Error";
 import Faq from "../Page/FAQ/Faq";
 import Home from "../Page/Home/Home";
 import SingIn from "../Page/Logins/SingIn";
@@ -17,6 +18,10 @@ const router =  createBrowserRouter([
         children:[
             {
                 path:'/',
+                element:<Home/>
+            },
+            {
+                path:'/home',
                 element:<Home/>
             },
             {
@@ -61,11 +66,20 @@ const router =  createBrowserRouter([
 
             },
             {
-                path:'/checkout',
+                path:'/checkout/:id',
+                loader:({params})=>{
+                        return(
+                            fetch(`http://localhost:5000/checkout/${params.id}`)
+                        )
+                },
                 element: <PrivateRoute><CheckOut/></PrivateRoute>
 
             }
         ]
+    },
+    {
+path:'*',
+element: <ErrorPage/>
     }
 ]);
 

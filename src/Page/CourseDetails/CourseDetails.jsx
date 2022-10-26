@@ -3,6 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { FaStar, FaSketch, FaUserFriends } from "react-icons/fa";
 const CourseDetails = () => {
   const {
+    id,
     img,
     description,
     title,
@@ -32,7 +33,7 @@ const CourseDetails = () => {
               <div className=" sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
               <h3 className="text-2xl py-3 font-semibold">Course Discription</h3>
                 <p className="leading-relaxed text-lg mb-4">{description}</p>
-                <Link to="/checkout" className="text-indigo-500 inline-flex items-center">
+                <Link to={`/checkout/${id}`} className="text-indigo-500 inline-flex items-center">
                   <button className="inline-flex items-center justify-center bg-green-500 hover:bg-green-700 text-white uppercase text-sm font-semibold px-4 py-2 rounded">
                     Get premium access
                     <svg
@@ -53,7 +54,7 @@ const CourseDetails = () => {
             <article className="max-w- px-6 py-10 mx-auto space-y-12  dark:bg-gray-800 dark:text-gray-50">
               <div className="pt-12 border-t dark:border-gray-700">
                 <h3 className=" text-2xl text-gray-900 font-bold py-5">
-                  Author
+                Instructor 
                 </h3>
                 <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row justify-start">
                   <img

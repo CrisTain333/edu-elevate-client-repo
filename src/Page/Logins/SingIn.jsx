@@ -4,7 +4,7 @@ import AuthContext from "../../Contexts/Context";
 
 const SingIn = () => {
   const [error,setError]=useState('');
-  const {singInUser} = useContext(AuthContext)
+  const {singInUser ,  googleLogin , gitLogin} = useContext(AuthContext)
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -25,6 +25,16 @@ const SingIn = () => {
       setError(err)
     })
   };
+
+  const handleGoogleLogin = ()=>{
+    googleLogin()
+    .then(()=>{
+      navigate(from, { replace: true });
+    })
+    .catch(error=>{
+      setError(error.message)
+    })
+  }
 
   return (
     <div className="flex items-center lg:h-screen lg:w-full">
@@ -74,7 +84,7 @@ const SingIn = () => {
           <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
         </div>
         <div className="flex justify-center space-x-4">
-          <button aria-label="Log in with Google" className="p-3 rounded-sm">
+          <button aria-label="Log in with Google" className="p-3 rounded-sm" onClick={handleGoogleLogin}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
