@@ -21,7 +21,7 @@ const Courses = () => {
                
                   return (
                     <>
-                      <Link
+                    <Link
                         key={c.id}
                         to={`/course/${c.id}`}
                         className="flex items-center p-2 space-x-3 rounded-md"
@@ -31,6 +31,7 @@ const Courses = () => {
                           {c.name}
                         </span>
                       </Link>
+                     
                     </>
                   );
                 })}
@@ -44,7 +45,7 @@ const Courses = () => {
           <div className="container px-5 py-10 mx-auto">
             <div className="-my-8 divide-y-2 divide-gray-100">
               {cources.map((e) => {
-                return <CourseCard key={e.id} data={e} />;
+                return <CourseCard key={e.id} data={e} />
               })}
             </div>
           </div>

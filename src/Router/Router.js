@@ -28,7 +28,7 @@ const router =  createBrowserRouter([
                 path:'/Courses',
                 loader:async()=>{
                     return(
-                        fetch('http://localhost:5000/courses')
+                        fetch('https://edu-elevate-server-cristain333.vercel.app/courses')
                     )
                 },
                 element:<Courses/>
@@ -37,7 +37,7 @@ const router =  createBrowserRouter([
                 path:'/course/:id',
                 loader:async({params})=>{
                     return(
-                        fetch(`http://localhost:5000/courses/${params.id}`)
+                        fetch(`https://edu-elevate-server-cristain333.vercel.app/courses/${params.id}`)
                     )
 
                 },
@@ -69,7 +69,7 @@ const router =  createBrowserRouter([
                 path:'/checkout/:id',
                 loader:({params})=>{
                         return(
-                            fetch(`http://localhost:5000/checkout/${params.id}`)
+                            fetch(`https://edu-elevate-server-cristain333.vercel.app/checkout/${params.id}`)
                         )
                 },
                 element: <PrivateRoute><CheckOut/></PrivateRoute>

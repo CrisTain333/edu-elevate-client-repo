@@ -2,10 +2,15 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../Image/brandLogo.png";
 import AuthContext from "../../Contexts/Context";
-
+import { FaMoon } from "react-icons/fa";
+import { FaSun } from "react-icons/fa";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { user , singOutUser } = useContext(AuthContext);
+  const { user, singOutUser } = useContext(AuthContext);
+
+  const getdata = e =>{
+    
+  }
 
   return (
     <>
@@ -56,6 +61,24 @@ const Header = () => {
             </li>
           </ul>
           <ul className="flex items-center hidden space-x-8 lg:flex">
+            <li>
+              <label
+                htmlFor="Toggle1"
+                className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100"
+              >
+                <span>
+                  <FaSun />
+                </span>
+                <span className="relative">
+                  <input id="Toggle1" type="checkbox" className="hidden peer" />
+                  <div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-400 peer-checked:bg-gray-600"></div>
+                  <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-800"></div>
+                </span>
+                <span>
+                  <FaMoon />
+                </span>
+              </label>
+            </li>
             {user ? (
               <>
                 <li>
@@ -146,7 +169,6 @@ const Header = () => {
                   </div>
                   <nav>
                     <ul className="space-y-4">
-                    
                       <li>
                         <Link
                           to="/home"
@@ -188,6 +210,26 @@ const Header = () => {
                         </Link>
                       </li>
                       <li>
+                          <label
+                            htmlFor="Toggle2"
+                            className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100"
+                          >
+                            <span>
+                              <FaSun />
+                            </span>
+                            <span className="relative">
+                              <input
+                                id="Toggle2"
+                                type="checkbox"
+                                className="hidden peer"
+                              />
+                              <div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-400 peer-checked:bg-gray-600"></div>
+                              <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-800"></div>
+                            </span>
+                            <span>
+                              <FaMoon />
+                            </span>
+                          </label>
                         {user ? (
                           <>
                             <img
