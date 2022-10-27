@@ -7,11 +7,13 @@ const CourseCard = (props) => {
     <>
     <div className="py-8 lg:flex flex-wrap md:flex-nowrap">
         <div className="md:w-64 md:mb-0 flex-shrink-0 flex items-center">
-          <img
+        <Link to={`/course/${id}`}>
+        <img
             className="lg:h-40 md:h-36 sm:h-80 w-full rounded-lg object-cover object-center"
             src={img}
             alt="blog"
           />
+        </Link>
         </div>
         <div className="md:flex-grow lg:pl-8">
           <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">
