@@ -62,7 +62,7 @@ const SingUp = () => {
   const handleGitlogin = ()=>{
     gitLogin()
     .then((result) => {
-      
+      navigate(from, { replace: true });
     }).catch((error) => {
       const errorMessage = error.message;
       setError(errorMessage)

@@ -27,7 +27,7 @@ const Courses = () => {
                         className="flex items-center p-2 space-x-3 rounded-md"
                       
                       >
-                        <span className="text-xl hover:text-red-600">
+                        <span className="text-xl hover:text-green-400">
                           {c.name}
                         </span>
                       </Link>

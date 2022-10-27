@@ -4,13 +4,10 @@ import logo from "../../Image/brandLogo.png";
 import AuthContext from "../../Contexts/Context";
 import { FaMoon } from "react-icons/fa";
 import { FaSun } from "react-icons/fa";
+import "./header.css";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, singOutUser } = useContext(AuthContext);
-
-  const getdata = e =>{
-    
-  }
 
   return (
     <>
@@ -22,7 +19,7 @@ const Header = () => {
               Edu<span className="text-green-500 text-2xl">Elevate</span>
             </span>
           </Link>
-          <ul className="flex items-center hidden space-x-8 lg:flex">
+          <ul className=" items-center hidden space-x-8 lg:flex">
             <li>
               <Link
                 to="/home"
@@ -60,7 +57,7 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-          <ul className="flex items-center hidden space-x-8 lg:flex">
+          <ul className=" items-center hidden space-x-8 lg:flex">
             <li>
               <label
                 htmlFor="Toggle1"
@@ -81,12 +78,28 @@ const Header = () => {
             </li>
             {user ? (
               <>
-                <li>
+                <li className="group cursor-pointer relative inline-block  w-28 text-center">
                   <img
-                    className="inline-block h-10 w-10 mr-2 rounded-full ring-2 ring-white"
+                    className="inline-block h-10 w-10 mr-2 rounded-full ring-2 ring-white tooltip"
                     src={user?.photoURL}
-                    alt=""
-                  ></img>
+                    alt={`${user?.displayName} img`}
+                  />
+                  <div className="opacity-0 w-28 bg-black text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 ml-14 px-3 pointer-events-none">
+                    {user?.displayName}
+                    <svg
+                      className="absolute text-black h-2 w-full left-0 top-full"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 255 255"
+                    >
+                      <polygon
+                        className="fill-current"
+                        points="0,0 127.5,127.5 255,0"
+                      />
+                    </svg>
+                  </div>
+                </li>
+                <li>
                   <button
                     type="button"
                     className="bg-green-500 hover:bg-green-700 text-white uppercase text-sm font-semibold px-4 py-2 rounded "
@@ -210,33 +223,51 @@ const Header = () => {
                         </Link>
                       </li>
                       <li>
-                          <label
-                            htmlFor="Toggle2"
-                            className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100"
-                          >
-                            <span>
-                              <FaSun />
-                            </span>
-                            <span className="relative">
-                              <input
-                                id="Toggle2"
-                                type="checkbox"
-                                className="hidden peer"
-                              />
-                              <div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-400 peer-checked:bg-gray-600"></div>
-                              <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-800"></div>
-                            </span>
-                            <span>
-                              <FaMoon />
-                            </span>
-                          </label>
+                        <label
+                          htmlFor="Toggle2"
+                          className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100"
+                        >
+                          <span>
+                            <FaSun />
+                          </span>
+                          <span className="relative">
+                            <input
+                              id="Toggle2"
+                              type="checkbox"
+                              className="hidden peer"
+                            />
+                            <div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-400 peer-checked:bg-gray-600"></div>
+                            <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-800"></div>
+                          </span>
+                          <span>
+                            <FaMoon />
+                          </span>
+                        </label>
+                      </li>
+                      <li>
                         {user ? (
                           <>
-                            <img
-                              className="inline-block h-10 w-10 mr-2 rounded-full ring-2 ring-white"
-                              src={user?.photoURL}
-                              alt=""
-                            />
+                            <div className="group cursor-pointer relative inline-block w-28 text-center">
+                              <img
+                                className="inline-block h-10 w-10 mr-2 rounded-full ring-2 ring-white"
+                                src={user?.photoURL}
+                                alt=""
+                              />
+                              <div class="opacity-0 w-28 bg-black text-white text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2 ml-14 px-3 pointer-events-none">
+                              {user?.displayName}
+                                <svg
+                                  class="absolute text-black h-2 w-full left-0 top-full"
+                                  x="0px"
+                                  y="0px"
+                                  viewBox="0 0 255 255"
+                                >
+                                  <polygon
+                                    class="fill-current"
+                                    points="0,0 127.5,127.5 255,0"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
                             <button
                               type="button"
                               className="bg-green-500 hover:bg-green-700 text-white uppercase text-sm font-semibold px-4 py-2 rounded"

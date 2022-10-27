@@ -22,7 +22,8 @@ const Footer = () => {
               stroke="currentColor"
               fill="none"
               src={logo}
-            ></img>
+              alt="brandImage"
+            />
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
             edu<span className="text-green-500">Elevate</span>
             </span>

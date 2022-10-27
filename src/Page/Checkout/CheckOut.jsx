@@ -18,6 +18,7 @@ const CheckOut = () => {
                   className="inline-flex -mt-9 w-[72px] h-[72px] fill-current rounded-full border-4 border-white box-content shadow mb-3"
                   viewBox="0 0 72 72"
                   src={logo}
+                  alt="brand"
                 />
                 {/* <!-- Card name --> */}
                 <h3 className="text-xl font-bold text-gray-900 mb-1">
