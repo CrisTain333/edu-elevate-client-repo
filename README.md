@@ -7,9 +7,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## `Live Link`
 
 
+
 ## `WebSite Name : Edu Elevate`
 
-EDU ELEVATE This is An online Learning Plartfrom .\
+EDU ELEVATE This is An online Learning Platform .\
 For Developers Around The World .\
 
  ## `Features and Functionality`
@@ -20,20 +21,20 @@ For Developers Around The World .\
 
 ⚫️ Used Firebase For Authentication.
 
-⚫️ Our Website Has  Google & Github Login.
+⚫️ You can Login With Google & Github Login.
 
 ⚫️ Used Environment Variables To Hide Some Secret Data.
 
-⚫️ Used Tailwind For Design This Website  .
+⚫️ Used Tailwind Css Framework .
 
-⚫️ Used React Icons for show icon.
+⚫️ Used React Icons for show icons.
 
-⚫️ Used React-To-Pdf Package  To genarate PDF .
+⚫️ Used React-To-Pdf Package  To Generate PDF .
 
-⚫️ Used React Hot Toast .
+⚫️ Used React Hot Toast To show Erros.
 
 
- ## `Frameworks & Libraries We Used In This Website`
+ ## `Frameworks & Libraries , Package We Used In This Website`
 
  `React-Router-Dom V6`
 
@@ -42,5 +43,7 @@ For Developers Around The World .\
  `Firebase`
 
  `React-To-PDF Package`
+
+ `React Hot Toast`
 
 

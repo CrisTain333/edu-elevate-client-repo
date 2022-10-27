@@ -39,7 +39,16 @@ const Blog = () => {
                   also want to consider leveraging this tool if you eventually
                   wish to host and manage your app in the cloud. Being
                   serverless, Firebase removes the need to worry about the
-                  technicalities of cloud server configuration.
+                  technicalities of cloud server configuration. <br />
+                  Competitors and Alternatives to Firebase Realtime Database:{" "}
+                  <br />
+                  → MongoDB <br />
+                  → Oracle Database <br />
+                  → Amazon Redshift <br />
+                  → DataStax Enterprise <br />
+                  → Redis Enterprise Cloud <br />
+                  → Cloudera Enterprise Data Hub <br />
+                  → Db2 <br />→ Couchbase Server
                 </p>
               </div>
             </div>
@@ -66,11 +75,18 @@ const Blog = () => {
             <div className="py-8 flex flex-wrap md:flex-nowrap">
               <div className="md:flex-grow">
                 <h2 className="text-3xl font-medium text-gray-900 title-font mb-2">
-                What Is Node? How Does Node Work?
+                  What Is Node? How Does Node Work?
                 </h2>
                 <p className="leading-relaxed">
-                Node.js is an open-source backend javascript runtime environment. It is a used as backend service where javascript works on the server-side of the application. This way javascript is used on both frontend and backend. Node.js runs on chrome v8 engine which converts javascript code into machine code, it is highly scalable, lightweight, fast, and data-intensive.
-                Node.js accepts the request from the clients and sends the response, while working with the request node.js handles them with a single thread.
+                  Node.js is an open-source backend javascript runtime
+                  environment. It is a used as backend service where javascript
+                  works on the server-side of the application. This way
+                  javascript is used on both frontend and backend. Node.js runs
+                  on chrome v8 engine which converts javascript code into
+                  machine code, it is highly scalable, lightweight, fast, and
+                  data-intensive. Node.js accepts the request from the clients
+                  and sends the response, while working with the request node.js
+                  handles them with a single thread.
                 </p>
               </div>
             </div>

@@ -50,7 +50,7 @@ const UserContext = ({ children }) => {
     setLoading(true);
     return signInWithPopup(auth, provider);
   };
-
+  
   const gitLogin = () => {
     setLoading(true);
     return signInWithPopup(auth, gitProvider);
